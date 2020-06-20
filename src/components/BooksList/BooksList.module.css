@@ -1,0 +1,161 @@
+.booksListcontainer {
+  max-width: 835px;
+  margin: 10px 30px 0 0;
+}
+
+img {
+  height: 250px;
+  width: 100%;
+  margin: 0;
+}
+
+img:hover,
+svg:hover {
+  cursor: pointer;
+}
+
+.img__wrap {
+  position: relative;
+  margin: 5px 0;
+  border-style: ridge;
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(2, 14, 22, 0.274);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Modal */
+
+.modalContainer {
+  max-width: 816px;
+  height: 600px;
+  display: flex;
+}
+
+.modalImg {
+  width: 480px;
+  height: 100%;
+}
+
+.modalHeader {
+  height: 72px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalComents {
+  width: 336px;
+  height: 445px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.modalUserCard {
+  display: flex;
+  padding: 10px 20px;
+}
+
+.modalLikes svg {
+  margin: 5px 10px;
+}
+
+.modalLikesCount {
+  margin: 0 10px;
+}
+
+.svgHover {
+  margin: 0 5px;
+  background-color: white;
+}
+
+.imgHover {
+  width: 25px;
+  height: 25px;
+}
+
+.imgHoverLeft {
+  margin-right: 20px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.modalFooter textarea {
+  width: 100%;
+  height: 35px;
+  margin-top: 50px;
+  border-width: 0 px;
+  border: none;
+  resize: none;
+}
+
+.modalFooter textarea:focus {
+  outline: none;
+}
+
+.postBtn {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #b7e1fd;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.burgermenu {
+  width: 25px;
+  height: 25px;
+}
+
+.secondModalWrapper {
+  width: 400px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(var(--f23, 255, 255, 255), 1);
+}
+
+.secondModalBtn {
+  height: 48.4px;
+  text-align: center;
+  margin: 0;
+  vertical-align: middle;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  cursor: pointer;
+}
