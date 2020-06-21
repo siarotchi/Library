@@ -1,133 +1,23 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Card, List, Modal, Button } from 'antd/lib';
 import s from './BooksList.module.css';
 import Rates from '../Rates.js/Rates';
 import Filter from '../Filter/Filter';
+import { updateShelf } from '../../redux/actions/actions';
 
 class BooksList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: [
-        {
-          url: 'https://covers.openlibrary.org/b/id/270628-L.jpg',
-          category: 'Fantasy',
-          id: 1,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/8236963-L.jpg',
-          category: 'Art',
-          id: 2,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/4898540-L.jpg',
-          category: 'Art',
-          id: 3,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/2238081-L.jpg',
-          category: 'Art',
-          id: 4,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/9326621-L.jpg',
-          category: 'Fantasy',
-          id: 5,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/8474036-L.jpg',
-          category: 'Art',
-          id: 6,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/10082428-L.jpg',
-          category: 'Fantasy',
-          id: 7,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/10194302-L.jpg',
-          category: 'Fantasy',
-          id: 8,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/9342647-L.jpg',
-          category: 'Romance',
-          id: 9,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/5048643-L.jpg',
-          category: 'Romance',
-          id: 10,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/9278292-L.jpg',
-          category: 'Romance',
-          id: 11,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/8236992-L.jpg',
-          category: 'Art',
-          id: 12,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/2238306-L.jpg',
-          category: 'Art',
-          id: 13,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/8266542-L.jpg',
-          category: 'Fantasy',
-          id: 14,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-        {
-          url: 'https://covers.openlibrary.org/w/id/4703873-L.jpg',
-          category: 'Art',
-          id: 15,
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
-        },
-      ],
       users: [
         {
-          url: 'https://www.thelogomix.com/files/imagecache/v3-logo-detail/Nike.jpg',
+          url: 'https://www.pngkey.com/png/full/448-4483798_download-icon-user-png-clipart-computer-icons-user.png',
           name: 'JavaScrip',
           message: "I am your's father! Come to the dark side!",
         },
         {
-          url: 'https://www.thelogomix.com/files/imagecache/v3-logo-detail/Nike.jpg',
-          name: 'React',
-          message: 'To the moon!',
-        },
-        {
-          url: 'https://www.thelogomix.com/files/imagecache/v3-logo-detail/Nike.jpg',
+          url: 'https://www.pngkey.com/png/full/448-4483798_download-icon-user-png-clipart-computer-icons-user.png',
           name: 'Typescript',
           message: 'Where are my types!?',
         },
@@ -149,8 +39,13 @@ class BooksList extends Component {
     this.setState({ modal2Visible });
   };
 
+  addBookToShelf = (item) => {
+    return this.props.updateShelf(item);
+  };
+
   render() {
-    const { books, users } = this.state;
+    const { users } = this.state;
+    const { filteredBooks } = this.props;
 
     return (
       <div className={s.booksListcontainer}>
@@ -165,7 +60,7 @@ class BooksList extends Component {
             xl: 3,
             xxl: 5,
           }}
-          dataSource={books}
+          dataSource={filteredBooks}
           renderItem={(item, id) => (
             <List.Item>
               <Card
@@ -206,7 +101,7 @@ class BooksList extends Component {
                 }
               ></Card>
               <div className={s.bookBtn}>
-                <Button style={{ borderColor: '#91d5ff', width: '100%' }} onClick={() => this.props.getBook(item)}>
+                <Button style={{ borderColor: '#91d5ff', width: '100%' }} onClick={() => this.addBookToShelf(item)}>
                   Add to Shelf
                 </Button>
               </div>
@@ -249,7 +144,8 @@ class BooksList extends Component {
                         <span>
                           <span className={s.flex}>
                             <span>
-                              <b>{u.name}</b> &nbsp; {u.message}
+                              <b>{u.name}</b>
+                              <p>{u.message}</p>
                             </span>
                             <svg
                               aria-label="Like"
@@ -263,7 +159,6 @@ class BooksList extends Component {
                             </svg>
                           </span>
                           <p>1d &nbsp; 1432 likes &nbsp; Reply</p>
-                          <a src="#">---- View replies(68)</a>
                         </span>
                       </div>
                     </span>
@@ -300,21 +195,18 @@ class BooksList extends Component {
             onCancel={() => this.setModal2Visible(false)}
             footer={null}
             closable={false}
-            width={400}
-            height={290}
-            bodyStyle={{ padding: '0', borderRadius: '14px' }}
+            width={250}
+            height={250}
+            bodyStyle={{ padding: '0' }}
             zIndex={2000}
           >
             <div className={s.secondModalContainer}>
               <div className={s.secondModalWrapper}>
-                <button className={s.secondModalBtn}>
-                  <b style={{ color: 'red' }}>Report Inappropriate</b>
-                </button>
-                <button className={s.secondModalBtn}>Go to post</button>
                 <button className={s.secondModalBtn}>Share</button>
                 <button className={s.secondModalBtn}>Copy Link</button>
-                <button className={s.secondModalBtn}>Emded</button>
-                <button className={s.secondModalBtn}>Cancel</button>
+                <button className={s.secondModalBtn}>Do smth</button>
+                <button className={s.secondModalBtn}>Do smth</button>
+                <button className={s.secondModalBtn}>Do smth</button>
               </div>
             </div>
           </Modal>
@@ -324,4 +216,9 @@ class BooksList extends Component {
   }
 }
 
-export default BooksList;
+const mapStateToProps = (state) => {
+  return { filteredBooks: state.app.filteredBooks };
+};
+const mapDispatchToProps = { updateShelf };
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './Header.module.css';
-// import { connect } from "react-redux";
-// import { switchTheme } from "../../redux/actions/appActions";
+import { connect } from 'react-redux';
+import { switchTheme } from '../../redux/actions/actions';
 
 const Header = ({ dispatch }) => {
-  //   const changeAppTheme = () => {
-  //     dispatch(switchTheme("green"));
-  //   };
+  const changeAppTheme = () => {
+    dispatch(switchTheme('green'));
+  };
 
   return (
     <header className={s.headerAppContainer}>
@@ -40,28 +40,24 @@ const Header = ({ dispatch }) => {
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName={s.active} to="/about">
-                About us
+              <NavLink activeClassName={s.active} to="/withApi">
+                With API
               </NavLink>
             </li>
           </ul>
         </nav>
       </div>
       <div className={s.switcherTheme}>
-        <input
-          type="checkbox"
-          id="switch"
-          // onClick={changeAppTheme}
-        />
+        <input type="checkbox" id="switch" onClick={changeAppTheme} />
         <label htmlFor="switch">Toggle</label>
       </div>
     </header>
   );
 };
 
-// const mapStateToProps = state => ({
-//   appColor: state.app.appTheme
-// });
+const mapStateToProps = (state) => ({
+  appColor: state.app.appTheme,
+});
 
-export default Header;
-// export default connect(mapStateToProps)(Header);
+// export default Header;
+export default connect(mapStateToProps)(Header);

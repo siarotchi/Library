@@ -1,10 +1,10 @@
 import React from 'react';
-import { MDBIcon, MDBContainer, MDBBtn } from 'mdbreact';
+import { MDBIcon, MDBContainer } from 'mdbreact';
 
 const SocialButtonsPage = () => {
   return (
     <MDBContainer>
-      <a href="https://www.facebook.com/stanly.cole" target="blank" className="fb-ic mr-3">
+      <a href="https://www.facebook.com" target="blank" className="fb-ic mr-3">
         <MDBIcon fab icon="facebook-f" />
       </a>
       <a href="https://twitter.com" target="blank" className="tw-ic mr-3">

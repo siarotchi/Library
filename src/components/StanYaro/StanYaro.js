@@ -14,7 +14,7 @@ const StanYaro = () => {
 
       <section className="introduction-section">
         <h1>Introduction</h1>
-        <p>I am a UI developer and this is my Project.</p>
+        <p>I am a Front-End developer and this is my Project.</p>
         <p>
           I have 10 years of experience in accounting and statistics of sales, database management. I'm hardworking,
           serious, responsible and reliable employee. Know how to manage my time and to distribute tasks by complexity
@@ -72,10 +72,10 @@ const StanYaro = () => {
         <h1>More About Me</h1>
         <h2>What are your favorite hobbies?</h2>
         <p>My favorite hobbies are volleyball, guitar and coding.</p>
-        <h2>Why do you want to be a UI developer?</h2>
+        <h2>Why do you want to be a Front-End developer?</h2>
         <p>
-          Simple answer I loved it. I loved the thrill. I love to see my imagination come to life. I choose to be a UI
-          developer to bring my ideas to life and help others see what I think a better world looks like.
+          Simple answer I loved it. I loved the thrill. I love to see my imagination come to life. I choose to be a
+          Front-End developer to bring my ideas to life and help others see what I think a better world looks like.
         </p>
         <h2>What's your dream job?</h2>
         <p>
@@ -87,6 +87,9 @@ const StanYaro = () => {
       <footer className="content-footer">
         <p>Say hi to me on these social networks:</p>
         <SocialButtonsPage />
+        <p style={{ textAlign: 'left', margin: '40px 0 0 10px' }}>
+          &#9400; 2020 by Stanislav Iarotchi. All Rights Reserved
+        </p>
       </footer>
     </div>
   );

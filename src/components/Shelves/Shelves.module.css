@@ -1,14 +1,14 @@
 .shelvesWrapper {
-    width: 615px;
+  width: 615px;
 }
 
 .shelvesContainer {
-    width: 100%;
-    margin: 20px 0;
-    padding: 10px;
-    border-style: ridge;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border-style: ridge;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* .btnOnHover {

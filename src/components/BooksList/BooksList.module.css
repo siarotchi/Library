@@ -33,7 +33,7 @@ svg:hover {
   color: #fff;
   visibility: hidden;
   opacity: 0;
-  transition: opacity .2s, visibility .2s;
+  transition: opacity 0.2s, visibility 0.2s;
 }
 
 .img__wrap:hover .img__description {
@@ -111,7 +111,7 @@ svg:hover {
 .modalFooter textarea {
   width: 100%;
   height: 35px;
-  margin-top: 50px;
+  margin-top: 20px;
   border-width: 0 px;
   border: none;
   resize: none;
@@ -141,8 +141,8 @@ svg:hover {
 }
 
 .secondModalWrapper {
-  width: 400px;
-  height: 290px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: rgba(var(--f23, 255, 255, 255), 1);
