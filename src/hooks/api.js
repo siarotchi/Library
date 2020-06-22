@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+//not using
 
 export default function useSearchId() {
   useEffect(() => {
     axios({
-      method: "GET",
-      url: "https://github.com/toddmotto/public-apis#books"
-    }).then(res => {
+      method: 'GET',
+      url: 'https://github.com/toddmotto/public-apis#books',
+    }).then((res) => {
       console.log(res.data);
     });
   }, []);

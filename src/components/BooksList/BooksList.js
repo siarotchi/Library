@@ -4,29 +4,18 @@ import { Card, List, Modal, Button } from 'antd/lib';
 import s from './BooksList.module.css';
 import Rates from '../Rates.js/Rates';
 import Filter from '../Filter/Filter';
-import { updateShelf } from '../../redux/actions/actions';
+import { updateShelf, addNewComment } from '../../redux/actions/actions';
 
 class BooksList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [
-        {
-          url: 'https://www.pngkey.com/png/full/448-4483798_download-icon-user-png-clipart-computer-icons-user.png',
-          name: 'JavaScrip',
-          message: "I am your's father! Come to the dark side!",
-        },
-        {
-          url: 'https://www.pngkey.com/png/full/448-4483798_download-icon-user-png-clipart-computer-icons-user.png',
-          name: 'Typescript',
-          message: 'Where are my types!?',
-        },
-      ],
       modalVisible: false,
       modal2Visible: false,
       imageUrl: '',
       shelf: [],
     };
+    this.input = React.createRef();
   }
 
   setModalVisible = (modalVisible, imageUrl) => {
@@ -43,9 +32,23 @@ class BooksList extends Component {
     return this.props.updateShelf(item);
   };
 
+  // addComment = ({ key }, postMessage) => {
+  //   const { addNewComment } = this.props;
+
+  //   if (key === 'Enter') {
+  //     addNewComment(postMessage);
+  //   }
+  // };
+
+  handleSubmit = (e) => {
+    const { addNewComment } = this.props;
+
+    addNewComment(this.input.current.value);
+    e.preventDefault();
+  };
+
   render() {
-    const { users } = this.state;
-    const { filteredBooks } = this.props;
+    const { usersMessages, filteredBooks } = this.props;
 
     return (
       <div className={s.booksListcontainer}>
@@ -134,7 +137,7 @@ class BooksList extends Component {
                   </span>
                 </div>
 
-                {users.map((u, index) => (
+                {usersMessages.map((u, index) => (
                   <div key={index}>
                     <span>
                       <div className={s.modalUserCard}>
@@ -179,12 +182,12 @@ class BooksList extends Component {
                 <div className={s.modalLikesCount}>
                   <b>418 likes</b>
                 </div>
-                <div className={s.modalFooter}>
-                  <textarea type="text" placeholder="Add a comment..." />
+                <form onSubmit={this.handleSubmit} className={s.modalFooter}>
+                  <textarea ref={this.input} type="text" placeholder="Add a comment..." />
                   <button type="submit" className={s.postBtn}>
                     Post
                   </button>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -217,8 +220,8 @@ class BooksList extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { filteredBooks: state.app.filteredBooks };
+  return { filteredBooks: state.app.filteredBooks, usersMessages: state.app.users };
 };
-const mapDispatchToProps = { updateShelf };
+const mapDispatchToProps = { updateShelf, addNewComment };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

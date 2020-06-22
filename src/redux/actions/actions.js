@@ -4,6 +4,7 @@ export const UPDATE_SHELF = 'UPDATE_SHELF';
 export const ADD_NEW_SHELF = 'ADD_NEW_SHELF';
 export const DELETE_BOOK_FROM_SHELF = 'DELETE_BOOK_FROM_SHELF';
 export const ADD_NEW_FILTER = 'ADD_NEW_CATEGORY';
+export const ADD_NEW_COMMENT = 'ADD_NEW_COMMENT';
 
 export const switchTheme = (color) => ({
   type: CHANGE_UP_THEME,
@@ -33,4 +34,9 @@ export const deleteBookFromShelf = (id, categoryId) => ({
 export const addNewFilter = (name) => ({
   type: ADD_NEW_FILTER,
   payload: name,
+});
+
+export const addNewComment = (message) => ({
+  type: ADD_NEW_COMMENT,
+  payload: { message },
 });

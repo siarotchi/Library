@@ -14,13 +14,6 @@ const Filter = (props) => {
     props.addNewFilter(categoryName);
   };
 
-  // const options = [
-  //   { label: 'All', value: 'All' },
-  //   { label: 'Fantasy', value: 'Fantasy' },
-  //   { label: 'Art', value: 'Art' },
-  //   { label: 'Romance', value: 'Romance' },
-  // ];
-
   return (
     <div className={s.filterContainer}>
       <Checkbox.Group

@@ -12,9 +12,9 @@ const Header = ({ dispatch }) => {
   return (
     <header className={s.headerAppContainer}>
       <div className={s.headerAppLeft}>
-        <a href="https://www.goparrot.ai/" target="blank">
+        <a href="#" target="blank">
           <img
-            src="https://scontent.fkiv5-1.fna.fbcdn.net/v/t1.0-9/92244382_918490648585708_6689192520187904000_n.png?_nc_cat=105&_nc_sid=85a577&_nc_oc=AQmNwY5Sy2_e-6sH9LK7S_RWHKVBcW1vgr4A9ktda-UgwlHHr0EQnUPZzcBKz5UAU8c&_nc_ht=scontent.fkiv5-1.fna&oh=5f43d90f72e8fc2a9c1d552daa535a31&oe=5F0F33F0"
+            src="https://lh3.googleusercontent.com/proxy/0ag4AciX5P6-3mxOR8AJ1ExKuPAgHwC-7cg88rThum-f11zChBiMHrF8k_BDBP7S2Vj2KjhTvgECMN9ciep4EdWHxleCWdgV2mp_eIHxyAm7ajNwA93PqQ"
             alt="logo"
           ></img>
         </a>
@@ -35,13 +35,8 @@ const Header = ({ dispatch }) => {
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName={s.active} to="/review">
-                Review
-              </NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName={s.active} to="/withApi">
-                With API
+              <NavLink activeClassName={s.active} to="/filter">
+                Filter Comp
               </NavLink>
             </li>
           </ul>
