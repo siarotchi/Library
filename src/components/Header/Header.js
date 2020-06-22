@@ -35,13 +35,8 @@ const Header = ({ dispatch }) => {
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName={s.active} to="/review">
-                Review
-              </NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName={s.active} to="/withApi">
-                With API
+              <NavLink activeClassName={s.active} to="/filter">
+                Filter Comp
               </NavLink>
             </li>
           </ul>

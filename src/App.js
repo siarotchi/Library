@@ -10,8 +10,8 @@ import Filter from './components/Filter/Filter';
 const App = (props) => {
   return (
     <BrowserRouter>
-      <div className="app-wrapper" style={{ backgroundColor: props.appColor }}>
-        <div className="appContainer">
+      <div className="app-wrapper">
+        <div className="appContainer" style={{ backgroundColor: props.appColor }}>
           <Header />
           <div className="appContent">
             <Switch>
@@ -21,10 +21,7 @@ const App = (props) => {
               <Route path={'/list'} exact component={Home} />
             </Switch>
             <Switch>
-              <Route path={'/review'} exact component={Filter} />
-            </Switch>
-            <Switch>
-              <Route path={'/withApi'} exact component={Filter} />
+              <Route path={'/filter'} exact component={Filter} />
             </Switch>
           </div>
         </div>
