@@ -1,0 +1,18 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+  background: #e0e5ec;
+  box-shadow: 16px 16px 32px #96999e, -16px -16px 32px #ffffff;
+}
+.aboutContext {
+  width: 200px;
+  text-align: center;
+  padding: 2%;
+  font-size: large;
+  border-radius: 10px;
+  background: #e0e5ec;
+  box-shadow: inset 11px 11px 22px #94979c, inset -11px -11px 22px #ffffff;
+}

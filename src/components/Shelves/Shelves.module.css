@@ -11,6 +11,9 @@
   border: 10px solid transparent;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 0px;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
 }
 .shelfBtn {
   align-self: center;

@@ -23,19 +23,13 @@ const Header = ({ dispatch }) => {
         <nav>
           <ul id={s.menu}>
             <li>
-              <NavLink activeClassName={s.active} to="/">
-                Home
-              </NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink activeClassName={s.active} to="/shelves">
-                Shelves
-              </NavLink>
+              <NavLink to="/shelves">Shelves</NavLink>
             </li>
             <li>
-              <NavLink activeClassName={s.active} to="/shelves">
-                About
-              </NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
           </ul>
         </nav>

@@ -9,8 +9,6 @@ const StanYaro = () => {
         <p className="masthead-intro">Hi I'm</p>
         <h1 className="masthead-heading">Stan!</h1>
       </header>
-      <hr />
-      <hr />
 
       <section className="introduction-section">
         <h1>Introduction</h1>
@@ -84,9 +82,13 @@ const StanYaro = () => {
         </p>
       </section>
 
-      <footer className="content-footer">
-        <p>Say hi to me on these social networks:</p>
-        <SocialButtonsPage />
+      <footer className="container-footer">
+        <div className="content-footer">
+          <p>Say hi to me on these social networks:</p>
+          <div className="socialBtns">
+            <SocialButtonsPage />
+          </div>
+        </div>
         <p style={{ textAlign: 'left', margin: '40px 0 0 10px' }}>
           &#9400; 2020 by Stanislav Iarotchi. All Rights Reserved
         </p>

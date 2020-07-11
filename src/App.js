@@ -3,9 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import { connect } from 'react-redux';
 import Header from './components/Header/Header';
-import Home from './pages/Home';
 import StanYaro from './components/StanYaro/StanYaro';
 import Shelves from './components/Shelves/Shelves';
+import BooksList from './components/BooksList/BooksList';
+import About from './components/About/About';
 
 const App = (props) => {
   return (
@@ -18,10 +19,13 @@ const App = (props) => {
               <Route path={'/stanyaro'} exact component={StanYaro} />
             </Switch>
             <Switch>
-              <Route path={'/'} exact component={Home} />
+              <Route path={'/'} exact component={BooksList} />
             </Switch>
             <Switch>
               <Route path={'/shelves'} exact component={Shelves} />
+            </Switch>
+            <Switch>
+              <Route path={'/about'} exact component={About} />
             </Switch>
           </div>
         </div>

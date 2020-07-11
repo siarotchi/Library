@@ -1,29 +1,40 @@
 .headerAppContainer {
   max-width: 100%;
   margin: 0 auto;
-  height: 120px;
-  border-radius: 10px;
-  /* border-style: ridge; */
+  height: 130px;
+  margin-bottom: 2%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #e0e5ec;
-  /* background-color: grey; */
-  /* background-image: url('https://img.wallpapersafari.com/desktop/1600/900/26/11/3qcaH0.jpg'); */
+  border-radius: 0px;
+  background: #e0e5ec;
+  box-shadow: 16px 16px 32px #96999e, -16px -16px 32px #ffffff;
 }
 h1,
+h3,
 ul#menu li {
   color: white;
   text-shadow: 2px 2px 4px #000000;
 }
 .headerAppLeft {
-  display: flex;
-  align-items: center;
+  padding: 0 1%;
   text-decoration: none;
+  border-radius: 30px;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
+  /* border-radius: 10px;
+  background: linear-gradient(145deg, #f0f5fd, #caced4);
+  box-shadow: 17px 17px 34px #7d8084, -17px -17px 34px #ffffff; */
+}
+.headerAppRight {
+  padding: 1% 1% 0 1%;
+  border-radius: 30px;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
 }
 
 .headerAppLeft h1 {
-  font-size: 50px;
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -35,23 +46,13 @@ ul#menu li {
   margin-left: 80px;
 }
 
-.headerAppLeft img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.headerAppLeft img:hover {
-  transform: scale(1.3);
-}
-
 .headerAppContainer nav {
   display: flex;
 }
 
 ul#menu li {
   display: inline;
-  font-size: 23px;
+  font-size: 30px;
   margin: 0 20px;
 }
 
@@ -60,7 +61,7 @@ ul#menu a {
   text-decoration: none;
 }
 
-ul#menu a.active {
+ul#menu a:focus {
   color: gold;
 }
 
@@ -93,9 +94,11 @@ ul#menu a.active {
   left: 5px;
   width: 20px;
   height: 20px;
-  background: #1890ff;
+  background: #a9adb3d5;
   border-radius: 20px;
   transition: 0.3s;
+  background: linear-gradient(145deg, #d7dce4, #caced4);
+  box-shadow: 11px 11px 22px #636568, -11px -11px 22px #ffffff;
 }
 
 .switcherTheme label:active:after {

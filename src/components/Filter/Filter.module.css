@@ -1,7 +1,12 @@
 .filterContainer {
   display: flex;
   justify-content: center;
-  padding-bottom: 2%;
+  align-items: center;
+  padding: 2%;
+  margin-bottom: 1%;
+  border-radius: 0px;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
 }
 
 .filterContainer button {

@@ -5,6 +5,8 @@ import { Checkbox, Button } from 'antd';
 import { updateFilteredValues, addNewFilter } from '../../redux/actions/actions';
 
 const Filter = (props) => {
+  const { filteredValues, filters } = props;
+
   const onChange = (checkedValues) => {
     props.updateFilteredValues(checkedValues);
   };
@@ -16,12 +18,8 @@ const Filter = (props) => {
 
   return (
     <div className={s.filterContainer}>
-      <Checkbox.Group
-        className={s.filterGroup}
-        defaultValue={props.filteredValues}
-        options={props.filters}
-        onChange={onChange}
-      />
+      <Checkbox.Group className={s.filterGroup} defaultValue={filteredValues} options={filters} onChange={onChange} />
+
       <button onClick={addCategory}>Add Category</button>
     </div>
   );

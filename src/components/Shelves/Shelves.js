@@ -26,6 +26,7 @@ const Shelves = (props) => {
                 <h1
                   style={{
                     width: '100%',
+                    paddingLeft: '1%',
                   }}
                 >
                   {item.category}

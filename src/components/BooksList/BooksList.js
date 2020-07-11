@@ -105,10 +105,7 @@ class BooksList extends Component {
                 }
               ></Card>
               {/* <div className={s.bookBtn}> */}
-              {/* <Button style={{ borderColor: '#91d5ff', width: '100%' }} onClick={() => this.addBookToShelf(item)}>
-                  Add to Shelf
-                </Button> */}
-              <button className={s.bookBtn} onClick={() => this.addBookToShelf(item)}>
+              <button type="button" className={s.bookBtn} onClick={() => this.addBookToShelf(item)}>
                 Add to Shelf
               </button>
               {/* </div> */}

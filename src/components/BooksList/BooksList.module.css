@@ -1,8 +1,19 @@
 .booksListcontainer {
   max-width: 100%;
   padding: 1% 5%;
-  background-color: #e0e5ec;
+  /* background-color: #e0e5ec; */
+  /* border-radius: 0px;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff; */
+  border-radius: 0px;
+  background: #e0e5ec;
+  box-shadow: 16px 16px 32px #96999e, -16px -16px 32px #ffffff;
 }
+/* .ant-list {
+  border-radius: 0px;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
+} */
 
 img {
   height: 250px;
@@ -17,10 +28,12 @@ svg:hover {
 }
 
 .img__wrap {
-  position: relative;
-  margin: 5px 0;
+  /* position: relative; */
   border-style: ridge;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  border-radius: 0px;
+  background: linear-gradient(145deg, #f0f5fd, #caced4);
+  box-shadow: 16px 16px 32px #96999e, -16px -16px 32px #ffffff;
 }
 
 .img__description {
@@ -55,16 +68,20 @@ svg:hover {
   color: black;
   text-shadow: 4px 4px 6px #000000;
 }
-.bookBtn:hover {
-  transform: scale(0.8);
+
+.bookBtn:focus {
+  background: linear-gradient(145deg, #28c81d, #21a818);
+  box-shadow: 8px 8px 10px #177411;
+  color: black;
+  text-shadow: 4px 4px 6px #000000;
 }
 
 /* Modal */
-
 .modalContainer {
   max-width: 816px;
   height: 600px;
   display: flex;
+  background-color: #e1e6ed;
 }
 
 .modalImg {
@@ -128,10 +145,14 @@ svg:hover {
 .modalFooter textarea {
   width: 100%;
   height: 35px;
+  text-align: center;
   margin-top: 20px;
   border-width: 0 px;
   border: none;
   resize: none;
+  border-radius: 10px;
+  background: #e0e5ec;
+  box-shadow: inset 11px 11px 22px #94979c, inset -11px -11px 22px #ffffff;
 }
 
 .modalFooter textarea:focus {
@@ -155,7 +176,6 @@ svg:hover {
   width: 25px;
   height: 25px;
 }
-
 .secondModalWrapper {
   width: 100%;
   height: 100%;
