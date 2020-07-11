@@ -3,12 +3,21 @@
   flex-direction: column;
 }
 .booksOnShelf {
-  width: 80px;
-  height: 150px;
+  width: 150px;
+  height: 200px;
   padding: 10px;
   display: flex;
   flex-direction: row;
+  margin: 0 15px;
 }
 .deletBtn {
-  margin: 0 5px;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+  margin: 20px 5px;
+  border-radius: 35px;
+  background: linear-gradient(145deg, #8f3030, #792929);
+  box-shadow: 8px 8px 10px #722626;
+  color: black;
+  text-shadow: 4px 4px 6px #000000;
 }

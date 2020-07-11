@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import StanYaro from './components/StanYaro/StanYaro';
-import Filter from './components/Filter/Filter';
+import Shelves from './components/Shelves/Shelves';
 
 const App = (props) => {
   return (
@@ -18,10 +18,10 @@ const App = (props) => {
               <Route path={'/stanyaro'} exact component={StanYaro} />
             </Switch>
             <Switch>
-              <Route path={'/list'} exact component={Home} />
+              <Route path={'/'} exact component={Home} />
             </Switch>
             <Switch>
-              <Route path={'/filter'} exact component={Filter} />
+              <Route path={'/shelves'} exact component={Shelves} />
             </Switch>
           </div>
         </div>

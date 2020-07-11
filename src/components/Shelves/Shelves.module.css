@@ -1,16 +1,30 @@
 .shelvesWrapper {
-  width: 615px;
+  width: 100%;
+  background-color: #e0e5ec;
 }
 
 .shelvesContainer {
   width: 100%;
-  margin: 20px 0;
-  padding: 10px;
-  border-style: ridge;
+  /* margin: 20px 0; */
+  /* padding: 10px; */
+  /* border-style: ridge; */
+  border: 10px solid transparent;
   display: flex;
   flex-wrap: wrap;
 }
-
-/* .btnOnHover {
-
-} */
+.shelfBtn {
+  align-self: center;
+}
+.shelfBtn button {
+  width: 120px;
+  margin: 10px;
+  border-radius: 35px;
+  background: linear-gradient(145deg, #28c81d, #21a818);
+  box-shadow: 8px 8px 10px #177411;
+  color: black;
+  text-shadow: 4px 4px 6px #000000;
+}
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}

@@ -1,14 +1,21 @@
 .headerAppContainer {
   max-width: 100%;
   margin: 0 auto;
-  height: 250px;
-  border-style: ridge;
+  height: 120px;
+  border-radius: 10px;
+  /* border-style: ridge; */
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: url('https://img.wallpapersafari.com/desktop/1600/900/26/11/3qcaH0.jpg');
+  background-color: #e0e5ec;
+  /* background-color: grey; */
+  /* background-image: url('https://img.wallpapersafari.com/desktop/1600/900/26/11/3qcaH0.jpg'); */
 }
-
+h1,
+ul#menu li {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
 .headerAppLeft {
   display: flex;
   align-items: center;
@@ -16,7 +23,6 @@
 }
 
 .headerAppLeft h1 {
-  color: #1890ff;
   font-size: 50px;
   cursor: pointer;
 }

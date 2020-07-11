@@ -12,13 +12,6 @@ const Header = ({ dispatch }) => {
   return (
     <header className={s.headerAppContainer}>
       <div className={s.headerAppLeft}>
-        <a href="#" target="blank">
-          <img
-            src="https://lh3.googleusercontent.com/proxy/0ag4AciX5P6-3mxOR8AJ1ExKuPAgHwC-7cg88rThum-f11zChBiMHrF8k_BDBP7S2Vj2KjhTvgECMN9ciep4EdWHxleCWdgV2mp_eIHxyAm7ajNwA93PqQ"
-            alt="logo"
-          ></img>
-        </a>
-
         <span>
           <NavLink to="/stanyaro">
             <h1>Stanislav Iarotchi</h1>
@@ -30,13 +23,18 @@ const Header = ({ dispatch }) => {
         <nav>
           <ul id={s.menu}>
             <li>
-              <NavLink activeClassName={s.active} to="/list">
+              <NavLink activeClassName={s.active} to="/">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName={s.active} to="/filter">
-                Filter Comp
+              <NavLink activeClassName={s.active} to="/shelves">
+                Shelves
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName={s.active} to="/shelves">
+                About
               </NavLink>
             </li>
           </ul>
@@ -54,5 +52,4 @@ const mapStateToProps = (state) => ({
   appColor: state.app.appTheme,
 });
 
-// export default Header;
 export default connect(mapStateToProps)(Header);

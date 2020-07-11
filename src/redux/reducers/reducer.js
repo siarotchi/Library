@@ -9,6 +9,7 @@ import {
 } from '../actions/actions';
 import { setToStorage, getFromStorage } from '../../hooks/localStorage';
 import { books } from './constants';
+import { Alert } from 'antd';
 
 const InitialState = {
   appTheme: 'white',
@@ -64,6 +65,7 @@ function updateShelves(item, shelves) {
     if (!checkShelf[0].books.find((shelf) => shelf.id === item.id)) {
       const shelfIndex = checkShelf[0].id;
       newShelves[shelfIndex].books = [...newShelves[shelfIndex].books, item];
+
       return newShelves;
     } else return newShelves;
   }

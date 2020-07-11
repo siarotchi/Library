@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Shelves.module.css';
-import { List, Button } from 'antd/lib';
+import { List } from 'antd/lib';
 import Shelf from '../Shelf/Shelf';
 import { connect } from 'react-redux';
 import { addNewShelf } from '../../redux/actions/actions';
@@ -13,6 +13,9 @@ const Shelves = (props) => {
 
   return (
     <div className={s.shelvesWrapper}>
+      <div className={s.shelfBtn}>
+        <button onClick={addShelf}>Add Shelf</button>
+      </div>
       <List
         dataSource={props.shelves}
         renderItem={(item, id) => {
@@ -34,16 +37,6 @@ const Shelves = (props) => {
           // }
         }}
       />
-      <div className={s.shelfBtn}>
-        <Button
-          style={{
-            borderColor: '#91d5ff',
-          }}
-          onClick={addShelf}
-        >
-          Add Shelf
-        </Button>
-      </div>
     </div>
   );
 };

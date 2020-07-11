@@ -22,9 +22,7 @@ const Filter = (props) => {
         options={props.filters}
         onChange={onChange}
       />
-      <Button style={{ borderColor: '#91d5ff' }} onClick={addCategory}>
-        Add Category
-      </Button>
+      <button onClick={addCategory}>Add Category</button>
     </div>
   );
 };
