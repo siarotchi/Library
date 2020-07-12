@@ -4,14 +4,14 @@ import s from './Header.module.css';
 import { connect } from 'react-redux';
 import { switchTheme } from '../../redux/actions/actions';
 
-const Header = ({ dispatch }) => {
+const Header = ({ dispatch, style }) => {
   const changeAppTheme = () => {
-    dispatch(switchTheme('green'));
+    dispatch(switchTheme());
   };
 
   return (
-    <header className={s.headerAppContainer}>
-      <div className={s.headerAppLeft}>
+    <header className={s.headerAppContainer} style={style}>
+      <div className={s.headerAppLeft} style={style}>
         <span>
           <NavLink to="/stanyaro">
             <h1>Stanislav Iarotchi</h1>
@@ -19,7 +19,7 @@ const Header = ({ dispatch }) => {
         </span>
       </div>
 
-      <div className={s.headerAppRight}>
+      <div className={s.headerAppRight} style={style}>
         <nav>
           <ul id={s.menu}>
             <li>
@@ -43,7 +43,7 @@ const Header = ({ dispatch }) => {
 };
 
 const mapStateToProps = (state) => ({
-  appColor: state.app.appTheme,
+  style: state.app.appTheme.style,
 });
 
 export default connect(mapStateToProps)(Header);

@@ -6,9 +6,8 @@ export const DELETE_BOOK_FROM_SHELF = 'DELETE_BOOK_FROM_SHELF';
 export const ADD_NEW_FILTER = 'ADD_NEW_CATEGORY';
 export const ADD_NEW_COMMENT = 'ADD_NEW_COMMENT';
 
-export const switchTheme = (color) => ({
+export const switchTheme = () => ({
   type: CHANGE_UP_THEME,
-  color,
 });
 
 export const updateFilteredValues = (values) => ({

@@ -12,7 +12,7 @@ const App = (props) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <div className="appContainer" style={{ backgroundColor: props.appColor }}>
+        <div className="appContainer">
           <Header />
           <div className="appContent">
             <Switch>

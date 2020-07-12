@@ -10,8 +10,9 @@
 .aboutContext {
   width: 200px;
   text-align: center;
-  padding: 2%;
-  font-size: large;
+  margin-bottom: 1%;
+  padding: 1%;
+  font-size: x-large;
   border-radius: 10px;
   background: #e0e5ec;
   box-shadow: inset 11px 11px 22px #94979c, inset -11px -11px 22px #ffffff;

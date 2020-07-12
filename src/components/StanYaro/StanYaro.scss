@@ -5,9 +5,9 @@
 }
 
 .home-container {
-  // border-style: ridge;
   margin-top: 10px;
-  border-radius: 0px;
+  padding: 1%;
+  border-radius: 15px;
   background: #e0e5ec;
   box-shadow: 16px 16px 32px #96999e, -16px -16px 32px #ffffff;
 }
@@ -19,13 +19,15 @@
 }
 
 .masthead {
-  padding: 6em 0;
+  padding: 6em;
   height: 450px;
   margin: 10px;
+  border-radius: 15px;
   background-image: url('https://ak7.picdn.net/shutterstock/videos/14803987/thumb/6.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
+  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
 }
 
 .masthead-heading {

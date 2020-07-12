@@ -8,11 +8,11 @@ import {
   ADD_NEW_COMMENT,
 } from '../actions/actions';
 import { setToStorage, getFromStorage } from '../../hooks/localStorage';
-import { books } from './constants';
-import { Alert } from 'antd';
+import { books, darkStyle } from './constants';
+import { notification } from 'antd/lib';
 
 const InitialState = {
-  appTheme: 'white',
+  appTheme: { lightTheme: true, style: { backgroundColor: '#e0e5ec' } },
   books,
   filteredValues: getFromStorage('filteredValues') || ['All'],
   filteredBooks: getFromStorage('filteredBooks') || books,
@@ -42,11 +42,25 @@ const InitialState = {
     },
   ],
 };
+function succesNotification() {
+  notification.open({
+    message: 'Book is added to shelf',
+    description: 'Go to Shelves to check yours books',
+  });
+}
+function deniedNotification() {
+  notification.info({
+    message: `Attention`,
+    description: 'Book can be added only once',
+  });
+}
 
 function changeAppTheme(state, action) {
   return {
     ...state,
-    appTheme: state.appTheme === 'white' ? 'grey' : 'white',
+    appTheme: state.appTheme.lightTheme
+      ? { lightTheme: false, style: darkStyle }
+      : { lightTheme: true, style: { backgroundColor: '#e0e5ec' } },
   };
 }
 
@@ -65,9 +79,10 @@ function updateShelves(item, shelves) {
     if (!checkShelf[0].books.find((shelf) => shelf.id === item.id)) {
       const shelfIndex = checkShelf[0].id;
       newShelves[shelfIndex].books = [...newShelves[shelfIndex].books, item];
-
+      succesNotification();
       return newShelves;
-    } else return newShelves;
+    } else deniedNotification();
+    return newShelves;
   }
 }
 

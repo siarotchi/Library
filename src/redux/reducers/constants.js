@@ -105,3 +105,20 @@ export const books = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui sapien eget mi proin sed libero enim sed. Vulputate eu scelerisque felis imperdiet. Porta nibh venenatis cras sed. Egestas erat imperdiet sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo.',
   },
 ];
+
+export const darkStyle = {
+  background: 'linear-gradient(145deg, #a6f4ff, #8ccde6)',
+  color: '#40a9ff',
+};
+export const lightStyle = {
+  background: '#e0e5ec',
+};
+
+export const buttonDark = {
+  background: 'linear-gradient(145deg, #44b5ff, #3a98e6)',
+  color: 'white',
+};
+export const buttonLight = {
+  background: 'linear-gradient(145deg, #9be4ff, #83c0e6)',
+  color: 'black',
+};

@@ -17,7 +17,7 @@
   margin: 20px 5px;
   border-radius: 35px;
   background: linear-gradient(145deg, #8f3030, #792929);
-  box-shadow: 8px 8px 10px #722626;
-  color: black;
+  box-shadow: 5px 5px 10px #722626, -4px -4px 8px #ffffff;
+  color: white;
   text-shadow: 4px 4px 6px #000000;
 }

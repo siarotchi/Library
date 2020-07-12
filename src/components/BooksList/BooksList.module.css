@@ -1,19 +1,9 @@
 .booksListcontainer {
   max-width: 100%;
   padding: 1% 5%;
-  /* background-color: #e0e5ec; */
-  /* border-radius: 0px;
-  background: #e0e5ec;
-  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff; */
-  border-radius: 0px;
-  background: #e0e5ec;
+  border-radius: 15px;
   box-shadow: 16px 16px 32px #96999e, -16px -16px 32px #ffffff;
 }
-/* .ant-list {
-  border-radius: 0px;
-  background: #e0e5ec;
-  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
-} */
 
 img {
   height: 250px;
@@ -28,12 +18,10 @@ svg:hover {
 }
 
 .img__wrap {
-  /* position: relative; */
   border-style: ridge;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   border-radius: 0px;
   background: linear-gradient(145deg, #f0f5fd, #caced4);
-  box-shadow: 16px 16px 32px #96999e, -16px -16px 32px #ffffff;
+  box-shadow: 16px 16px 32px #96999e, -5px -5px 10px #ffffff;
 }
 
 .img__description {
@@ -58,22 +46,24 @@ svg:hover {
   opacity: 1;
 }
 .bookBtn {
+  background: none;
+  border: none;
   width: 50%;
-  margin: 10px 25%;
+  margin: 15px 25%;
   align-self: center;
   text-align: center;
   border-radius: 35px;
-  background: linear-gradient(145deg, #9be4ff, #83c0e6);
-  box-shadow: 8px 8px 10px #618fab;
-  color: black;
+  box-shadow: 8px 8px 10px #618fab, -4px -4px 8px #ffffff;
   text-shadow: 4px 4px 6px #000000;
 }
-
 .bookBtn:focus {
-  background: linear-gradient(145deg, #28c81d, #21a818);
-  box-shadow: 8px 8px 10px #177411;
-  color: black;
-  text-shadow: 4px 4px 6px #000000;
+  border: none;
+}
+.bookBtn:active {
+  top: 0.1em;
+  left: 0.1em;
+  border: none;
+  box-shadow: 0 0 0 60px rgba(0, 0, 0, 0.05) inset;
 }
 
 /* Modal */
@@ -99,7 +89,9 @@ svg:hover {
 
 .modalComents {
   width: 336px;
-  height: 445px;
+  height: 400px;
+  line-break: anywhere;
+  overflow-y: auto;
 }
 
 .avatar {
@@ -143,9 +135,9 @@ svg:hover {
 }
 
 .modalFooter textarea {
-  width: 100%;
+  width: 80%;
   height: 35px;
-  text-align: center;
+  padding: 2%;
   margin-top: 20px;
   border-width: 0 px;
   border: none;
@@ -160,11 +152,17 @@ svg:hover {
 }
 
 .postBtn {
+  width: 50px;
+  height: 35px;
+  margin-top: 20px;
   background: none;
   border: none;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   cursor: pointer;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f1f6fe, #cbcfd5);
+  box-shadow: 10px 10px 46px #808387, -10px -10px 46px #ffffff;
 }
 
 .flex {
@@ -194,4 +192,32 @@ svg:hover {
   border-right: 0;
   border-top: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
   cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  /* .ant-modal-content {
+    width: 250px;
+    height: 350px;
+  }
+  .ant-modal-body {
+    width: 250px;
+    height: 250px;
+  }
+  .modalContainer {
+    width: 250px;
+  }
+  .modalImg img {
+    width: 250px;
+    height: 350px;
+  }
+  .modalContext {
+    width: 250px;
+    height: 350px;
+  } */
+}
+@media screen and (max-width: 780px) {
+}
+@media screen and (max-width: 680px) {
+}
+@media screen and (max-width: 560px) {
 }

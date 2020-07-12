@@ -1,32 +1,34 @@
 import React from 'react';
 import s from './Filter.module.css';
-import { connect } from 'react-redux';
-import { Checkbox, Button } from 'antd';
+import { useSelector, useDispatch } from 'react-redux';
+import { Checkbox } from 'antd';
 import { updateFilteredValues, addNewFilter } from '../../redux/actions/actions';
+import { buttonLight, buttonDark, darkStyle, lightStyle } from '../../redux/reducers/constants';
 
-const Filter = (props) => {
-  const { filteredValues, filters } = props;
+const Filter = () => {
+  const filteredValues = useSelector((state) => state.app.filteredValues);
+  const filters = useSelector((state) => state.app.filters);
+  const style = useSelector((state) => state.app.appTheme.lightTheme);
+  const dispatch = useDispatch();
 
   const onChange = (checkedValues) => {
-    props.updateFilteredValues(checkedValues);
+    dispatch(updateFilteredValues(checkedValues));
   };
 
   const addCategory = () => {
     const categoryName = window.prompt('Add new category name');
-    props.addNewFilter(categoryName);
+    dispatch(addNewFilter(categoryName));
   };
 
   return (
-    <div className={s.filterContainer}>
+    <div className={s.filterContainer} style={style ? lightStyle : darkStyle}>
       <Checkbox.Group className={s.filterGroup} defaultValue={filteredValues} options={filters} onChange={onChange} />
 
-      <button onClick={addCategory}>Add Category</button>
+      <button onClick={addCategory} style={style ? buttonLight : buttonDark}>
+        Add Category
+      </button>
     </div>
   );
 };
-const mapStateToProps = (state) => {
-  return { filteredValues: state.app.filteredValues, filters: state.app.filters };
-};
-const mapDispatchToProps = { updateFilteredValues, addNewFilter };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+export default Filter;

@@ -11,12 +11,29 @@
 
 .filterContainer button {
   width: 120px;
+  border: none;
+  margin: 0 10%;
+  align-self: center;
+  text-align: center;
   border-radius: 35px;
-  background: linear-gradient(145deg, #28c81d, #21a818);
-  box-shadow: 8px 8px 10px #177411;
+  background: linear-gradient(145deg, #9be4ff, #83c0e6);
+  box-shadow: 8px 8px 10px #618fab, -4px -4px 8px #ffffff;
   color: black;
   text-shadow: 4px 4px 6px #000000;
 }
-.filterContainer button:hover {
-  transform: scale(0.8);
+
+@media screen and (max-width: 680px) {
+  .filterContainer button {
+    margin: 0 5%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .filterContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+  }
+  .filterContainer button {
+    margin: 3% 5% 0 5%;
+  }
 }

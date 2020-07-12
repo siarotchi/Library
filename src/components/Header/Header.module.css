@@ -1,15 +1,19 @@
 .headerAppContainer {
   max-width: 100%;
   margin: 0 auto;
-  height: 130px;
+  height: 110px;
   margin-bottom: 2%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 0px;
-  background: #e0e5ec;
+  border-radius: 15px;
   box-shadow: 16px 16px 32px #96999e, -16px -16px 32px #ffffff;
 }
+
+.headerAppContainer nav {
+  display: flex;
+}
+
 h1,
 h3,
 ul#menu li {
@@ -17,22 +21,13 @@ ul#menu li {
   text-shadow: 2px 2px 4px #000000;
 }
 .headerAppLeft {
+  height: 60px;
   padding: 0 1%;
   text-decoration: none;
-  border-radius: 30px;
-  background: #e0e5ec;
-  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
-  /* border-radius: 10px;
+  border-radius: 20px;
   background: linear-gradient(145deg, #f0f5fd, #caced4);
-  box-shadow: 17px 17px 34px #7d8084, -17px -17px 34px #ffffff; */
+  box-shadow: 12px 12px 24px #7d8084, -6px -6px 12px #ffffff;
 }
-.headerAppRight {
-  padding: 1% 1% 0 1%;
-  border-radius: 30px;
-  background: #e0e5ec;
-  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
-}
-
 .headerAppLeft h1 {
   font-size: 40px;
   cursor: pointer;
@@ -41,13 +36,11 @@ ul#menu li {
 .headerAppLeft h1:hover {
   color: #40a9ff;
 }
-
-.headerAppLeft span {
-  margin-left: 80px;
-}
-
-.headerAppContainer nav {
-  display: flex;
+.headerAppRight {
+  padding: 1% 1% 0 1%;
+  border-radius: 30px;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 13px #b8bcc2, inset -5px -5px 13px #ffffff;
 }
 
 ul#menu li {
@@ -112,4 +105,57 @@ ul#menu a:focus {
 .switcherTheme input:checked + label:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
+}
+
+@media screen and (max-width: 991px) {
+  .headerAppLeft h1 {
+    font-size: 35px;
+    padding-top: 2%;
+  }
+  .headerAppRight a {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .headerAppContainer {
+    height: 100px;
+  }
+  .headerAppLeft h1 {
+    font-size: 30px;
+    padding-top: 4%;
+  }
+  .headerAppRight a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .headerAppContainer {
+    height: 100px;
+  }
+  .headerAppLeft h1 {
+    font-size: 25px;
+    padding-top: 6%;
+  }
+  .headerAppRight a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .headerAppContainer {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .headerAppLeft {
+    margin: 3%;
+  }
+  .headerAppLeft h1 {
+    width: 300px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .headerAppRight a {
+    font-size: 15px;
+  }
 }
