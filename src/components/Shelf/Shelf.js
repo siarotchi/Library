@@ -1,7 +1,7 @@
 import React from 'react';
 import s from '../Shelf/Shelf.module.css';
 import { deleteBookFromShelf } from '../../redux/actions/actions';
-import { connect, useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 
 const Shelf = (props) => {
   return props.books.map(({ url, id }) => (

@@ -18,10 +18,10 @@ const About = () => {
         <p>React Router</p>
       </div>
 
-      <div class="row">
-        <input id="button-2" name="button-2" type="checkbox"></input>
-        <label style={style ? lightStyle : darkStyle} for="button-2" class="button button-square button-border">
-          ✔️
+      <div className="row">
+        <input onClick={() => window.click()} id="button-2" name="button-2" type="checkbox"></input>
+        <label style={style ? lightStyle : darkStyle} htmlFor="button-2" className="button button-square button-border">
+          ❄
         </label>
       </div>
     </div>

@@ -1,14 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import { connect } from 'react-redux';
 import Header from './components/Header/Header';
 import StanYaro from './components/StanYaro/StanYaro';
 import Shelves from './components/Shelves/Shelves';
 import BooksList from './components/BooksList/BooksList';
 import About from './components/About/About';
 
-const App = (props) => {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -34,8 +33,4 @@ const App = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  appColor: state.app.appTheme,
-});
-
-export default connect(mapStateToProps)(App);
+export default App;
