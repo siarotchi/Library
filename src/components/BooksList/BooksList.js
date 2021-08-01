@@ -115,7 +115,7 @@ const BooksList = () => {
         onOk={() => setModalVisible(false)}
         onCancel={() => setModalVisible(false)}
         footer={null}
-        width={716}
+        width={816}
         bodyStyle={{ padding: '0' }}
         closable={false}
       >
@@ -123,7 +123,7 @@ const BooksList = () => {
           <img className={s.modalImg} alt="modalImg" src={modalDetails.url} />
           <div className={s.modalContext}>
             <div className={s.modalHeader}>
-              <span>Rate book</span>
+            <span>Rate book</span>
               <Rates />
               <span type="primary" onClick={() => setModalVisible2(true)}>
                 <img

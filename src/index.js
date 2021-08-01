@@ -10,9 +10,7 @@ import Store from './redux/store';
 
 ReactDOM.render(
   <Provider store={Store}>
-    <React.StrictMode>
       <App />
-    </React.StrictMode>
   </Provider>,
   document.getElementById('root')
 );

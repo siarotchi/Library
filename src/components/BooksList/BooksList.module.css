@@ -68,6 +68,7 @@ svg:hover {
 
 /* Modal */
 .modalContainer {
+  width: 816px;
   max-width: 816px;
   height: 600px;
   display: flex;
@@ -162,6 +163,9 @@ svg:hover {
   background: linear-gradient(145deg, #f1f6fe, #cbcfd5);
   box-shadow: 10px 10px 46px #808387, -10px -10px 46px #ffffff;
 }
+.postBtn:active, .postBtn:focus {
+  outline: none;
+}
 
 .flex {
   display: flex;
@@ -171,6 +175,7 @@ svg:hover {
 .burgermenu {
   width: 25px;
   height: 25px;
+  border-radius: 5px;
 }
 .secondModalWrapper {
   width: 100%;
