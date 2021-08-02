@@ -4,13 +4,13 @@ import { darkStyle, lightStyle } from '../../redux/reducers/constants';
 import { useSelector } from 'react-redux';
 
 const About = () => {
-  const style = useSelector((state) => state.app.appTheme.lightTheme);
+  const styleTheme = useSelector((state) => state.app.appTheme.lightTheme);
 
   return (
-    <div className={s.about} style={style ? lightStyle : darkStyle}>
+    <div className={s.about} style={styleTheme ? lightStyle : darkStyle}>
       <h1>Library: React App</h1>
       <h3>What was used:</h3>
-      <div className={s.aboutContext} style={style ? lightStyle : darkStyle}>
+      <div className={s.aboutContext} style={styleTheme ? lightStyle : darkStyle}>
         <p>Redux</p>
         <p>Neumorphism</p>
         <p>Ant Design</p>
@@ -19,8 +19,8 @@ const About = () => {
       </div>
 
       <div className="row">
-        <input onClick={() => window.click()} id="button-2" name="button-2" type="checkbox"></input>
-        <label style={style ? lightStyle : darkStyle} htmlFor="button-2" className="button button-square button-border">
+        <input onClick={() => window.initsnow()} id="button-2" name="button-2" type="checkbox"></input>
+        <label style={styleTheme ? lightStyle : darkStyle} htmlFor="button-2" className="button button-square button-border">
           ❄
         </label>
       </div>
